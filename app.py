@@ -18,7 +18,6 @@ movies = [
     {'title': 'The Pork of Music', 'year': '2012'},
 ]
 
-
 @app.route('/')
 def index():
     return render_template('index.html', name=name, movies=movies)
