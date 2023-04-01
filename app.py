@@ -142,7 +142,6 @@ def edit(movie_id):
         if not title or not year or len(year) != 4 or len(title) > 60:
             flash('Invalid input.')
             return redirect(url_for('edit', movie_id=movie_id))  # 重定向回对应的编辑页面
-
         movie.title = title  # 更新标题
         movie.year = year  # 更新年份
         db.session.commit()  # 提交数据库会话
