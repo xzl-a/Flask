@@ -27,6 +27,9 @@ def index():
     movies = Movie.query.all()
     return render_template('index.html', movies=movies)
 
+@app.route('/yuanshen')
+def yuanshen():
+    return render_template('yuanshen.html')
 
 @app.route('/movie/edit/<int:movie_id>', methods=['GET', 'POST'])
 @login_required
