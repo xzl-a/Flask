@@ -40,3 +40,6 @@ def inject_user():
 
 
 from web import views, errors, commands
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
